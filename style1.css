@@ -38,11 +38,12 @@
  .form .input-box{
 width: 100%;
 margin-top: 30px;
+
  }
  .input-box label{
     color:black;
  }
- .form .input-box input{
+ .form .input-box .input-textbox{
 position: relative;
 height: 50px;
 width:100%;
@@ -57,21 +58,28 @@ margin-top: 8px;
  .form .gender-box{
     margin-top: 10px;
  }
- .gender-box{
+ .gender-box {
     color: #333;
     font-size: 1rem;
     font-weight: 400;
     margin-bottom:8px ;
  }
+ .table {
+   color: #333;
+   font-size: 1rem;
+   font-weight: 400;
+   margin-bottom:8px ;
+ }
+
  .form .column{
     display: flex;
     column-gap: 15px;
  }
  .form:where(.gender-option,.gender ){
     display: flex;
-    column-gap: 12px;
+    column-gap: 50px;
     align-items: center;
-    column-gap: 10px;
+  
  }
  .form .gender{
     column-gap: 15px;
@@ -82,7 +90,7 @@ margin-top: 8px;
  }
  .form button{
    height:55px;
-   width:100%;
+   width:20%;
    color:#ffff;
    font-size: 1rem;
    border: none;
@@ -92,10 +100,12 @@ margin-top: 8px;
    font-weight: 500;
    transition:all 0.2s ease;
    background-color:rgb(130,106,251);
+
  }
  .form button:hover{
    background-color: rgb(88,56,250);
  }
+
  /*Responsive */
  @media screen and ( max-width:500px)
  {

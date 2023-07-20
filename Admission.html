@@ -4,55 +4,93 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admission Form</title>
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/venobox.min.css">
+  <link rel="stylesheet" href="css/animated_barfiller.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/spacing.css">
+   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="style1.css">
+
 </head>
 <body>
   <section class="container">
   <header> Admission Form</header>
   <form action="#" class="form">
+    <h5>Personal Information</h5>
+      <hr>
     <div class="column">
     <div class="input-box">
       <label>First Name</label>
-       <input type="text" placeholder="Enter First name"/>
+       <input class="input-textbox" type="text" name="Fname" placeholder="Enter First name"/>
     </div>
     <div class="input-box">
       <label>Last Name</label>
-       <input type="text" placeholder="Enter Last name"/>
+       <input class="input-textbox" type="text" name="Lname" placeholder="Enter Last name"/>
     </div>
   </div>
 
+  <div class="column">
+    <div class="input-box">
+    <label>Phone number</label>
+     <input class="input-textbox" type="text"  name="Phonenumber" placeholder="Enter Phone Number"/>
+  </div>
+  <div class="input-box">
+    <label>Date Of Birth</label>
+     <input class="input-textbox" type="date"  name="Dob" placeholder="Enter Date of birth" required/>
+  </div>
+  </div>
+  <div class="column">
+    <div class="input-box">
+    <label>Country</label>
+     <input class="input-textbox" type="text"  name="country" placeholder="Enter Country"/>
+  </div>
+  <div class="input-box">
+    <label>City,State</label>
+     <input class="input-textbox" type="text"  name="City" placeholder="Enter City,state" required/>
+  </div>
+
+  </div>
+  <div class="input-box">
+    <label>Email Address</label>
+     <input class="input-textbox" type="text" name="Emailaddress" placeholder="Enter Email Address"/>
+  </div>
+
+  <div class="input-box">
+    <label>Home Address</label>
+     <input class="input-textbox" type="text" name="homeaddress" placeholder="Enter Home Address" required/>
+  </div>
+
+  
+  <hr>
+  <h5>Parent's Information</h5>
       <div class="input-box">
       <label>Father's Name</label>
-       <input type="text" placeholder="Enter Father Name" required/>
+       <input class="input-textbox" type="text" name="Faname" placeholder="Enter Father Name" required/>
     
     <div class="input-box">
       <label>Mother's Name</label>
-       <input type="text" placeholder="Enter Mother Name" required/>
+       <input class="input-textbox" type="text" name="Mname" placeholder="Enter Mother Name" required/>
     </div>
 
     <div class="input-box">
       <label>Email Address</label>
-       <input type="text" placeholder="Enter Email Address"/>
+       <input class="input-textbox" type="text" name="Emailaddress" placeholder="Enter Email Address"/>
     </div>
 
     <div class="input-box">
       <label>Home Address</label>
-       <input type="text" placeholder="Enter Home Address" required/>
+       <input class="input-textbox" type="text" name="homeaddress" placeholder="Enter Home Address" required/>
     </div>
-
-    <div class="column">
-      <div class="input-box">
-      <label>Phone number</label>
-       <input type="text" placeholder="Enter Phone Number"/>
-    </div>
-    <div class="input-box">
-      <label>Date Of Birth</label>
-       <input type="date" placeholder="Enter Date of birth" required/>
-    </div>
-
-    </div>
-   <!-- <div class="gender-box">
-      <h3>Gender</h3>
+    
+    <hr>
+   <div class="gender-box">
+      <h5>Gender</h5>
       <div class="gender-option">
         <div class="gender">
           <input type="radio" id="check-male" name="gender" checked>
@@ -68,8 +106,11 @@
           <label for="check-others">Prefer not to say</label>
         </div>
       </div>
-    </div>-->
-      <button>Submit</button>
+    </div>
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
   </form>
 </section>
 </body>
