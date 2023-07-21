@@ -1,13 +1,15 @@
 <?php
 $servername = "localhost";
-$username = "your_username";
-$password = "your_password";
+$username = "root";
+$password = "";
 $dbname = "students";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+}else{
+    echo "connected successfully<br>";
 }
 
 $Fname = "";
@@ -20,6 +22,8 @@ $phoneNO = "";
 $Haddress = "";
 $cityS = "";
 $gender = "";
+$passport="";
+$BirthC="";
 
 $FNerr="";
 $LNerr="";
@@ -31,6 +35,8 @@ $PNerr="";
 $HaddErr="";
 $CityErr="";
 $gendErr="";
+$PassErr="";
+$BCerr="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -120,10 +126,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     }else{
           $gender= test_input($_POST["gender"]);
-          if (!preg_match("/^!p[a-zA-Z-' ]*$/",$gender)) {
-      $gendErr= "Only letters and white space allowed";
+          
     }
+    if(empty($_POST["passport"])){
+        $PassErr="Please fill field";
+
+    }else{
+          $passport= test_input($_POST["passport"]);
+        
+
     }
+    if(empty($_POST["Birth_certificate"])){
+        $BCerr="Please fill field";
+
+    }else{
+          $BirthC= test_input($_POST["Birth_certificate"]);
+        
+    }
+
     if(!empty($FNerr)){
         echo $FNerr;
      }elseif(!empty($LNerr)){
@@ -144,12 +164,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         echo $CityErr;
      }elseif(!empty($gendErr)){
         echo $gendErr;
+    }elseif(!empty($PassErr)){
+        echo $PassErr;
+    }elseif(!empty($BCerr)){
+        echo $BCerr;
+    }
+
+        
     
 
 
-}
-if (empty($FNerr) && empty($LNerr) && empty($FAerr) && empty($MOerr) && empty($dobErr) && empty($EMerr) && empty($PNerr) && empty($HaddErr) && empty($CityErr) && empty($gendErr)) {
-    $sql = "INSERT INTO details (Fname, Lname, Faname, Mname, Dob, Emailaddress, phonenumber, homeaddress, city, gender) VALUES ('$Fname', '$Lname', '$FAname', '$MOname', '$DOB', '$email', '$phoneNO', '$Haddress', '$cityS', '$gender')";
+
+if (empty($FNerr) && empty($LNerr) && empty($FAerr) && empty($MOerr) && empty($dobErr) && empty($EMerr) && empty($PNerr) && empty($HaddErr) && empty($CityErr) && empty($gendErr) && empty($PassErr) && empty($BCerr)) {
+    $sql = "INSERT INTO details (Fname, Lname, Faname, Mname, Dob, Emailaddress, phonenumber, homeaddress, city, gender, passport, Birth_certificate) VALUES ('$Fname', '$Lname', '$FAname', '$MOname', '$DOB', '$email', '$phoneNO', '$Haddress', '$cityS', '$gender', '$passport', '$BirthC')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Data inserted successfully!";
