@@ -180,6 +180,7 @@ if (empty($FNerr) && empty($LNerr) && empty($FAerr) && empty($MOerr) && empty($d
 
     if ($conn->query($sql) === TRUE) {
         echo "Data inserted successfully!";
+        header("Location:http://127.0.0.1:5500/notification.html/");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

@@ -6489,3 +6489,100 @@ padding: 20px 10px;
     margin-right:100px;
     padding:20px 10px;
 }
+.privacy_policy_img {
+    width:25%;
+    float:right;
+    margin-left: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 10px; 
+}.privacy_policy2_img {
+    width:40%;
+    float:left;
+    margin-left: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 10px; 
+}.privacy_policy3_img {
+    width:40%;
+    float:right;
+    margin-left: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 10px; 
+}
+.discriminationn_img{
+    width:50%;
+    float:right;
+    margin-left:20px;
+    margin-right:0px;
+    padding: 20px;
+}
+.discrimination_text{
+    margin-left:80px;
+    margin-right: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+   padding:20px 10px;
+}
+.discrimination2_text{
+    margin-left:80px;
+    margin-right: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+   padding:20px 10px; 
+}
+.inland-empire_img {
+width:40%;
+float:right;
+padding: 0px 10px;
+}
+
+.service_area3_img{
+    width:20%;
+    float:left;
+    margin:0 20px 0 20px;
+    padding:0px 10px;
+}
+.service-area2{
+    width:50%;
+    float:right;
+    margin:0 20px 0 0;
+    padding:0px 10px;
+}
+.columns{
+    text-align: center;
+ display:grid;
+ grid-template-columns:50% 50%;
+}
+.columns2{
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* tablet breakpoint */
+@media (min-width:600px) {
+    .responsive-two-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.registry_img{
+    width:50%;
+    float:right;
+    margin:0 20px 0 0;
+    padding:0px 10px;
+}
+.student_service_img{
+    width:40%;
+float:right;
+padding: 0px 10px;
+margin:0 20px 0 0;
+}
+.studentservice_text{
+    margin-left:80px;
+    margin-right: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+   padding:20px 10px; 
+}
