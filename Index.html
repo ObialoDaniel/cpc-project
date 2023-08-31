@@ -1,0 +1,55 @@
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/venobox.min.css">
+  <link rel="stylesheet" href="css/animated_barfiller.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/spacing.css">
+   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="style-signup.css">
+
+</head>
+<body>
+  <section class="container">
+  <header>Sign Up</header>
+  <div class="logo">
+    <img src="cpc_logo_basic2-copy-large-clear-bkgnd (1) (1).png">
+  </div>
+ 
+  <form action="sign-in.php" method="post" class="form" onsubmit="return handleSubmit()">
+    <div class="input-box">
+      <label> Name</label>
+       <input class="input-textbox" type="text" name="name" placeholder="Enter Full name" required/>
+    </div>
+    <div class="input-box">
+      <label>username</label>
+      <input id="LoggingUsername" class="input-textbox" type="text"  name="username" placeholder="Enter your username" required/>
+  </div>
+  <div class="input-box">
+    <div>
+        <label>Password</label>
+       
+    </div>
+    <input id="loggingPassword" class="input-textbox" type="password" name="password" placeholder="Enter your password"required/>
+</div>
+        <div class="flex items-center mb-4">
+        <input type="checkbox" class="form-checkbox rounded" id="checkbox-signin">
+        <label  for="checkbox-signin">Remember me</label> <a href="#" class="text-sm text-primary">Forget Password ?</a>
+    </div>
+    <div class="flex justify-center mb-3">
+      <button class="btn w-full text-white bg-primary"><a href="Admindashboard.html"> </a> Sign In</button>
+  </div>
+  </form>
+</body>
+</section>
+</html>
